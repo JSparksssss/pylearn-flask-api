@@ -1,0 +1,15 @@
+Module Start
+LABEL0
+   if variable is out of range(10) then goto LABEL1
+LABEL2
+      if variable is out of range(i) then goto LABEL3
+         call function print
+         input arg:*
+         goto LABEL2
+LABEL3
+      call function print
+      input arg:
+
+      goto LABEL0
+LABEL1
+Module Done

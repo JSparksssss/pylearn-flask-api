@@ -1,0 +1,37 @@
+st3=>start: startModule
+op8=>operation: a = 1
+op10=>operation: b = 1
+op12=>operation: c = 1
+op14=>operation: d = 1
+cond17=>condition: if (a > 0)
+cond22=>condition: if (b > 0)
+sub26=>subroutine: print('ab')
+cond29=>condition: if (c > 0)
+sub33=>subroutine: cgz()
+sub51=>subroutine: print('abc')
+sub58=>subroutine: end_of_ifs()
+e60=>end: end Module
+cond38=>condition: if (d > 0)
+sub42=>subroutine: clez()
+sub55=>subroutine: alez()
+
+st3->op8
+op8->op10
+op10->op12
+op12->op14
+op14->cond17
+cond17(yes)->cond22
+cond22(yes)->sub26
+sub26->cond29
+cond29(yes)->sub33
+sub33->sub51
+sub51->sub58
+sub58->e60
+cond29(no)->cond38
+cond38(yes)->sub42
+sub42->sub51
+cond38(no)->sub51
+cond22(no)->sub51
+cond17(no)->sub55
+sub55->sub58
+
